@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { Nav, NavItem } from 'reactstrap'
-import Home from './../pages/Home'
+
 
 class Header extends Component {
   render() {
@@ -16,7 +16,8 @@ class Header extends Component {
       <>
         <h1>nest.</h1>
         <Nav>
-          <NavItem><Link src={Home} className="nav-link">Home</Link></NavItem>
+          <NavItem><NavLink to="/" className="nav-link">Home</NavLink></NavItem>
+          <NavItem><NavLink to="/apartmentindex" className="nav-link">Apartments</NavLink></NavItem>
           {logged_in &&
             <NavItem>
               <a href={sign_out_route} className="nav-link">Sign Out</a>
