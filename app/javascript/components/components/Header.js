@@ -17,8 +17,8 @@ class Header extends Component {
       <>
         <h1>nest.</h1>
         <Nav>
-          <NavItem><a href="/" className="nav-link">Home</a></NavItem>
-          <NavItem><a href="/apartmentindex" className="nav-link">Apartments</a></NavItem>
+          <NavItem><Link to="/" className="nav-link">Home</Link></NavItem>
+          <NavItem><Link to="/apartmentindex" className="nav-link">Apartments</Link></NavItem>
           {logged_in &&
             <NavItem>
               <a href={sign_out_route} className="nav-link">Sign Out</a>
