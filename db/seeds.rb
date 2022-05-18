@@ -9,7 +9,7 @@ apartments = [
       bedrooms: 2, 
       bathrooms: 1,
       pets: 'No',
-      image: '',
+      image: 'https://libreshot.com/wp-content/uploads/2017/07/apartment-house-exterior-design.jpg',
       user_id: 1
     },
     {
@@ -22,8 +22,8 @@ apartments = [
         bedrooms: 2, 
         bathrooms: 1,
         pets: 'No',
-        image: '',
-        user_id: 1
+        image: 'https://get.pxhere.com/photo/architecture-house-window-building-home-color-facade-property-apartment-tower-block-interior-design-colors-design-apartments-houses-panasonicdmcfz20-condominium-residential-area-575735.jpg',
+        user_id: 2
       }
   ]
   
