@@ -206,3 +206,11 @@ RSpec.describe "Apartments", type: :request do
   end
 end
 ```
+
+
+
+
+
+// how to get rid of database
+- db:drop 
+- db:seed

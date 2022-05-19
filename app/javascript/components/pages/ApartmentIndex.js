@@ -19,9 +19,12 @@ export default class ApartmentIndex extends Component {
                 <CardTitle>
                   <h3>{apartment.street}</h3>
                   <h4>{apartment.price}</h4>
+                  <NavLink to={`/apartmentshow/${apartment.id}`}>
+                  {apartment.street}
+                </NavLink>
                 </CardTitle>
+              
                 
- 
               </Card>
             )
           })}
