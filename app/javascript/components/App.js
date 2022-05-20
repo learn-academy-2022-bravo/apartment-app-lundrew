@@ -7,6 +7,7 @@ import ApartmentShow from './pages/ApartmentShow'
 import ApartmentNew from './pages/ApartmentNew'
 import ApartmentEdit from './pages/ApartmentEdit'
 import NotFound from './pages/NotFound'
+import MyApartmentIndex from './pages/MyApartmentIndex'
 import {
   BrowserRouter as Router,
   Route,
@@ -34,6 +35,13 @@ class App extends Component {
   }
 
   render() {
+    const {
+      logged_in,
+      current_user,
+      new_user_route,
+      sign_in_route,
+      sign_out_route
+    } = this.props
     return (
       
         <Router>
@@ -46,6 +54,16 @@ class App extends Component {
               let apartment = this.state.apartments.find(apartment => apartment.id === +id)
               return <ApartmentShow apartment={apartment} />
             }} />
+            { logged_in && 
+              <Route 
+                path="/myapartmentindex"
+                render={(props) => {
+                  let myApartments = this.state.apartments.filter(apartment => apartment.user_id === current_user.id)
+                  return (
+                    <MyApartmentIndex myApartments={myApartments}/>
+                  )
+                }}
+            />} 
             <Route path="/apartmentnew" component={ApartmentNew} />
             <Route path="/apartmentedit" component={ApartmentEdit} />
             <Route component={NotFound}/>
